@@ -1,0 +1,5 @@
+#!/bin/bash
+port=${1:-0}
+baudrate=${2:-115200}
+echo "Prepare to open ${port} with baudrate ${baudrate}"
+sudo minicom -D /dev/ttyUSB$1 -b ${baudrate}
